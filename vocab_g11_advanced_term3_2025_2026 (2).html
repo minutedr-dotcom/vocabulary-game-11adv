@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>11 Advanced Vocabulary – Term 3 – 2025/2026 | Dina Rabie</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0e8;
+  --surface: #fffdf8;
+  --surface2: #f0ebe0;
+  --border: #d8cfc0;
+  --text: #1a1208;
+  --muted: #6b5e48;
+  --l1: #c95e00;
+  --l1-glow: rgba(201,94,0,0.15);
+  --l2: #0a7a3e;
+  --l2-glow: rgba(10,122,62,0.15);
+  --gold: #a07800;
+  --green: #0a7a3e;
+  --green-bg: rgba(10,122,62,0.10);
+  --red: #c0000a;
+  --red-bg: rgba(192,0,10,0.09);
+  --radius: 14px;
+  --radius-sm: 9px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.10);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+body::before {
+  content:'';
+  position:fixed; inset:0; z-index:0;
+  background-image:
+    linear-gradient(rgba(160,120,0,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(160,120,0,0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+  pointer-events:none;
+}
+#bg-glow {
+  position:fixed; inset:0; z-index:0;
+  background: radial-gradient(ellipse 80% 40% at 50% 0%, rgba(201,94,0,0.06) 0%, transparent 70%);
+  pointer-events:none;
+}
+
+body::after {
+  content: '© Dina Rabie – Not for redistribution';
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  z-index: 9998;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(160,120,0,0.45);
+  letter-spacing: 1px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+#shield {
+  display:none; position:fixed; inset:0; z-index:9999;
+  background:#f5f0e8; color:#1a1208;
+  align-items:center; justify-content:center;
+  flex-direction:column; gap:14px;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:1.3rem; text-align:center;
+}
+#shield p { color:var(--muted); font-size:0.9rem; }
+
+.visitor-bar {
+  position:relative; z-index:10;
+  background: var(--surface);
+  border-bottom:1px solid var(--border);
+  text-align:center; padding:7px;
+  font-size:0.78rem; color:var(--muted);
+  letter-spacing:0.5px;
+}
+.visitor-bar span { color:var(--gold); font-weight:800; }
+
+header {
+  position:relative; z-index:10;
+  padding: 48px 24px 36px;
+  text-align:center;
+  border-bottom:1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255,253,248,0.98) 0%, rgba(245,240,232,0.7) 100%);
+}
+.badge {
+  display:inline-block;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  font-size:0.7rem; font-weight:800;
+  letter-spacing:2px; text-transform:uppercase;
+  padding:5px 16px; border-radius:30px;
+  margin-bottom:16px;
+  background: rgba(160,120,0,0.07);
+  box-shadow: 0 0 14px rgba(160,120,0,0.10);
+}
+header h1 {
+  font-family:'DM Serif Display', serif;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  line-height:1.15;
+  color: #1a1208;
+}
+header h1 em {
+  font-style:italic;
+  color: var(--l1);
+}
+.creator {
+  margin-top:10px;
+  font-size:0.82rem;
+  color:var(--muted);
+}
+.creator strong { color:var(--gold); font-weight:700; }
+.tagline {
+  margin-top:8px;
+  font-size:0.85rem;
+  color:var(--muted);
+  display:flex; align-items:center; justify-content:center; gap:10px;
+}
+.tagline span { width:24px; height:1px; background:var(--border); display:inline-block; }
+
+.lesson-nav {
+  position:relative; z-index:10;
+  display:flex; gap:12px;
+  padding:20px 20px 0;
+  max-width:960px; margin:0 auto;
+  flex-wrap:wrap;
+}
+.lesson-btn {
+  flex:1; min-width:200px;
+  background:var(--surface);
+  border:1.5px solid var(--border);
+  border-radius:var(--radius);
+  padding:18px 18px;
+  cursor:pointer; text-align:left;
+  transition:all 0.25s;
+  position:relative; overflow:hidden;
+}
+.lesson-btn:hover { border-color:var(--muted); transform:translateY(-2px); }
+.lesson-btn.l1.active { border-color:var(--l1); box-shadow:0 0 0 1px var(--l1), 0 8px 28px var(--l1-glow); background:rgba(240,136,62,0.06); }
+.lesson-btn.l2.active { border-color:var(--l2); box-shadow:0 0 0 1px var(--l2), 0 8px 28px var(--l2-glow); background:rgba(63,185,80,0.06); }
+.lesson-btn .l-num { font-size:0.68rem; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
+.lesson-btn.l1.active .l-num { color:var(--l1); }
+.lesson-btn.l2.active .l-num { color:var(--l2); }
+.lesson-btn .l-title { font-family:'DM Serif Display',serif; font-size:clamp(0.9rem,2vw,1.1rem); margin-top:6px; line-height:1.3; }
+.lesson-btn .l-sub { font-size:0.72rem; color:var(--muted); margin-top:4px; }
+.l-dot {
+  width:10px; height:10px; border-radius:50%;
+  display:inline-block; margin-right:6px;
+  vertical-align:middle;
+}
+.l1 .l-dot { background:var(--l1); }
+.l2 .l-dot { background:var(--l2); }
+
+.main { position:relative; z-index:10; max-width:960px; margin:0 auto; padding:20px; }
+
+.instruction {
+  text-align:center; font-size:0.82rem; color:var(--muted);
+  margin-bottom:16px; display:flex; align-items:center;
+  justify-content:center; gap:6px;
+}
+
+.word-grid { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
+.word-chip {
+  padding:8px 16px; border-radius:30px;
+  border:1.5px solid var(--border);
+  background:var(--surface);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:0.85rem; font-weight:600;
+  color:var(--text);
+  cursor:pointer; transition:all 0.2s;
+  display:flex; align-items:center; gap:5px;
+}
+.word-chip:hover { border-color:var(--muted); background:var(--surface2); }
+.l1-theme .word-chip.active { background:var(--l1); border-color:var(--l1); color:#fff; font-weight:800; box-shadow:0 4px 14px var(--l1-glow); }
+.l2-theme .word-chip.active { background:var(--l2); border-color:var(--l2); color:#fff; font-weight:800; box-shadow:0 4px 14px var(--l2-glow); }
+
+.word-card {
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:24px;
+  margin-bottom:20px;
+  animation:slideUp 0.3s ease;
+  position:relative; overflow:hidden;
+}
+.word-card::before {
+  content:'';
+  position:absolute; top:0; left:0; right:0; height:3px;
+  border-radius:var(--radius) var(--radius) 0 0;
+}
+.l1-theme .word-card::before { background:var(--l1); }
+.l2-theme .word-card::before { background:var(--l2); }
+@keyframes slideUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+.wc-top { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+.wc-word { font-family:'DM Serif Display',serif; font-size:clamp(1.6rem,5vw,2.2rem); }
+.l1-theme .wc-word { color:var(--l1); }
+.l2-theme .wc-word { color:var(--l2); }
+.wc-pos { font-size:0.78rem; color:var(--muted); font-style:italic; }
+.wc-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:16px; }
+@media(max-width:560px){ .wc-grid { grid-template-columns:1fr; } }
+.wc-box { background:var(--surface2); border-radius:var(--radius-sm); padding:14px; }
+.wc-label { font-size:0.68rem; text-transform:uppercase; letter-spacing:1.5px; font-weight:800; color:var(--muted); margin-bottom:6px; }
+.wc-meaning { font-size:0.92rem; font-weight:500; line-height:1.6; }
+.wc-arabic { font-family:'Tajawal',sans-serif; font-size:1rem; font-weight:700; direction:rtl; text-align:right; line-height:1.7; }
+.wc-divider { border:none; border-top:1px solid var(--border); margin:16px 0; }
+.wc-ex-label { font-size:0.68rem; text-transform:uppercase; letter-spacing:1.5px; font-weight:800; color:var(--muted); margin-bottom:8px; }
+.wc-example { font-size:0.93rem; line-height:1.7; color:#3d2e1a; font-style:italic; }
+.wc-example b { font-style:normal; font-weight:800; color:var(--text); }
+.wc-ex-ar { font-family:'Tajawal',sans-serif; font-size:0.93rem; direction:rtl; text-align:right; color:var(--muted); margin-top:10px; line-height:1.8; }
+.play-btn {
+  display:inline-flex; align-items:center; gap:7px;
+  margin-top:16px; padding:8px 20px;
+  border:1.5px solid var(--border); border-radius:30px;
+  background:var(--surface2);
+  font-family:'Plus Jakarta Sans',sans-serif; font-size:0.82rem; font-weight:700;
+  color:var(--text); cursor:pointer; transition:all 0.2s;
+}
+.play-btn:hover { background:var(--surface); }
+
+.section-sep { border:none; border-top:1px solid var(--border); margin:24px 0; }
+.mcq-header { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:16px; }
+.mcq-title { font-family:'DM Serif Display',serif; font-size:1.15rem; color:var(--text); }
+.score-box { padding:5px 14px; border-radius:30px; font-size:0.8rem; font-weight:700; background:var(--surface2); color:var(--text); border:1px solid var(--border); }
+.reset-btn { padding:6px 14px; border-radius:30px; border:1px solid var(--border); background:transparent; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.78rem; font-weight:700; color:var(--muted); cursor:pointer; transition:all 0.2s; }
+.reset-btn:hover { border-color:var(--muted); color:var(--text); }
+.mcq-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-sm); padding:20px 22px; margin-bottom:12px; transition:border-color 0.2s; }
+.mcq-q { font-size:0.95rem; font-weight:600; line-height:1.6; margin-bottom:14px; color:var(--text); }
+.mcq-q em { font-style:normal; border-bottom:2px solid var(--gold); padding-bottom:1px; color:var(--gold); }
+.mcq-options { display:flex; flex-direction:column; gap:7px; }
+.mcq-opt {
+  padding:10px 16px; border-radius:var(--radius-sm);
+  border:1.5px solid var(--border); background:var(--surface2);
+  font-family:'Plus Jakarta Sans',sans-serif; font-size:0.88rem; font-weight:600;
+  color:var(--text); cursor:pointer; text-align:left; transition:all 0.18s;
+}
+.mcq-opt:not(.answered):hover { border-color:var(--l1); background:rgba(201,94,0,0.06); color:#1a1208; }
+.mcq-opt.correct { background:rgba(10,122,62,0.10); border-color:var(--green); color:#075c2e; font-weight:700; }
+.mcq-opt.wrong { background:rgba(192,0,10,0.09); border-color:var(--red); color:#8c0007; font-weight:700; }
+.mcq-opt.answered { cursor:default; }
+.mcq-feedback { font-size:0.82rem; font-weight:700; margin-top:8px; padding:6px 12px; border-radius:6px; display:inline-block; }
+.mcq-feedback.ok { color:#075c2e; background:rgba(10,122,62,0.10); }
+.mcq-feedback.no { color:#8c0007; background:rgba(192,0,10,0.09); }
+
+/* ── TOTAL SCORE PANEL ── */
+#totalScorePanel {
+  position:relative; z-index:10;
+  max-width:960px; margin:0 auto 40px;
+  padding:0 20px;
+}
+.total-score-card {
+  background: var(--surface);
+  border:2px solid var(--gold);
+  border-radius:var(--radius);
+  padding:30px;
+  text-align:center;
+  box-shadow: 0 8px 32px rgba(160,120,0,0.12);
+  animation: slideUp 0.4s ease;
+}
+.total-score-card h2 {
+  font-family:'DM Serif Display',serif;
+  font-size:1.5rem;
+  color:var(--gold);
+  margin-bottom:6px;
+}
+.total-score-card .ts-sub {
+  font-size:0.82rem;
+  color:var(--muted);
+  margin-bottom:22px;
+}
+.ts-row {
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+.ts-box {
+  background:var(--surface2);
+  border:1px solid var(--border);
+  border-radius:var(--radius-sm);
+  padding:16px 24px;
+  min-width:160px;
+  text-align:center;
+}
+.ts-box .ts-label {
+  font-size:0.7rem;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:8px;
+}
+.ts-box .ts-num {
+  font-family:'DM Serif Display',serif;
+  font-size:2rem;
+  font-weight:700;
+}
+.ts-box.l1-box .ts-num { color:var(--l1); }
+.ts-box.l2-box .ts-num { color:var(--l2); }
+.ts-box.total-box .ts-num { color:var(--gold); }
+.ts-total-bar {
+  height:12px;
+  background:var(--surface2);
+  border-radius:30px;
+  overflow:hidden;
+  margin:0 auto 14px;
+  max-width:480px;
+  border:1px solid var(--border);
+}
+.ts-total-bar-fill {
+  height:100%;
+  border-radius:30px;
+  background: linear-gradient(90deg, var(--l1), var(--gold));
+  transition:width 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+.ts-grade {
+  font-family:'DM Serif Display',serif;
+  font-size:1.1rem;
+  color:var(--text);
+  margin-bottom:18px;
+}
+.ts-grade strong { color:var(--gold); }
+.ts-actions { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+.ts-reset-btn {
+  padding:10px 22px; border-radius:30px;
+  border:1.5px solid var(--border);
+  background:var(--surface2);
+  font-family:'Plus Jakarta Sans',sans-serif; font-size:0.84rem; font-weight:700;
+  color:var(--muted); cursor:pointer; transition:all 0.2s;
+}
+.ts-reset-btn:hover { border-color:var(--gold); color:var(--gold); }
+.ts-incomplete {
+  font-size:0.85rem;
+  color:var(--muted);
+  padding:14px 20px;
+  background:var(--surface2);
+  border-radius:var(--radius-sm);
+  border:1px solid var(--border);
+}
+.ts-incomplete strong { color:var(--l1); }
+
+footer {
+  position:relative; z-index:10;
+  text-align:center; padding:28px 20px;
+  border-top:1px solid var(--border);
+  font-size:0.78rem; color:var(--muted);
+  margin-top:20px;
+}
+footer strong { color:var(--gold); }
+
+@media(max-width:540px){
+  .lesson-nav { flex-direction:column; }
+  header { padding:32px 16px 24px; }
+  .ts-row { gap:10px; }
+  .ts-box { min-width:130px; padding:12px 16px; }
+}
+@media print {
+  body { display: none !important; }
+}
+</style>
+</head>
+<body>
+<div id="bg-glow"></div>
+<div id="shield">🔒 Access Restricted<p>This content is protected.</p></div>
+
+<div class="visitor-bar">👁️ Total Visitors: <span id="visitorCount">...</span></div>
+
+<header>
+  <div class="badge">Grade 11 Advanced · Term 3 · 2025/2026</div>
+  <h1>11 Advanced Vocabulary<br><em>Term 3 · 2025/2026</em></h1>
+  <div class="creator">Created by <strong>Dina Rabie</strong></div>
+  <div class="tagline"><span></span> Listen · Learn · Master · Excel <span></span></div>
+</header>
+
+<div class="lesson-nav" id="lessonNav"></div>
+<div class="main" id="mainContent"></div>
+<div id="totalScorePanel"></div>
+
+<footer>
+  Designed &amp; created by <strong>Dina Rabie</strong> · 11 Advanced Vocabulary · Term 3 · 2025/2026 · All rights reserved.
+</footer>
+
+<script>
+// ═══════════════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════════════
+const lessons = [
+
+  // ── LESSON 1 ─────────────────────────────────
+  {
+    id:1, cls:'l1', theme:'l1-theme', color:'var(--l1)', hex:'#c95e00',
+    title:"A Universal Language?",
+    sub:"What do people really mean? · What do you do for fun?",
+    words:[
+      {
+        word:"catch on", pos:"phrasal verb",
+        en:"to begin to understand something; to become popular or fashionable",
+        ar:"يستوعب / يفهم؛ ينتشر / يصبح شائعاً",
+        ex:"It took her a while to <b>catch on</b> to the idea that body language can mean more than words.",
+        exAr:"استغرق الأمر منها بعض الوقت لتدرك أن لغة الجسد يمكن أن تعني أكثر من الكلمات."
+      },
+      {
+        word:"friendliness", pos:"noun",
+        en:"the quality of being kind, warm, and pleasant towards others",
+        ar:"الودّية / المودة — صفة الشخص الطيب والدافئ في تعامله مع الآخرين",
+        ex:"Her natural <b>friendliness</b> made every visitor feel welcome the moment they walked in.",
+        exAr:"جعلت ودّيتها الطبيعية كل زائر يشعر بالترحيب في اللحظة التي دخل فيها."
+      },
+      {
+        word:"friendly", pos:"adjective",
+        en:"kind and pleasant; easy to talk to or be around",
+        ar:"ودود / لطيف — سهل التعامل معه",
+        ex:"A <b>friendly</b> smile is often enough to break the ice in an unfamiliar social situation.",
+        exAr:"الابتسامة الودودة كافية في أغلب الأحيان لكسر الجمود في موقف اجتماعي غير مألوف."
+      },
+      {
+        word:"friendships", pos:"noun (plural)",
+        en:"close relationships between people based on mutual trust and affection",
+        ar:"صداقات — علاقات وثيقة بين الأشخاص قائمة على الثقة المتبادلة والمودة",
+        ex:"Long-distance <b>friendships</b> require extra effort but can be just as meaningful as local ones.",
+        exAr:"الصداقات عن بُعد تتطلب جهداً إضافياً لكنها يمكن أن تكون بنفس قيمة الصداقات القريبة."
+      },
+      {
+        word:"greeting", pos:"noun / verb",
+        en:"a word, gesture, or action used to welcome or acknowledge someone",
+        ar:"تحية / ترحيب — كلمة أو إيماءة تُستخدم للترحيب بشخص ما",
+        ex:"A handshake is the most common business <b>greeting</b> in many Western countries.",
+        exAr:"المصافحة باليد هي التحية التجارية الأكثر شيوعاً في كثير من الدول الغربية."
+      },
+      {
+        word:"hard to say", pos:"idiom",
+        en:"difficult to know or express with certainty",
+        ar:"من الصعب القول / يصعب التأكد من ذلك",
+        ex:"It is <b>hard to say</b> whether humour truly is a universal language because cultures differ so widely.",
+        exAr:"من الصعب القول ما إذا كان الفكاهة حقاً لغة عالمية لأن الثقافات تختلف اختلافاً كبيراً."
+      },
+      {
+        word:"in the dark", pos:"idiom",
+        en:"not knowing about something; kept without information",
+        ar:"في الظلام / لا يعلم — غير مطّلع على شيء ما",
+        ex:"She felt completely <b>in the dark</b> about why her colleague had stopped speaking to her.",
+        exAr:"شعرت أنها في الظلام تماماً بشأن سبب توقف زميلها عن الحديث إليها."
+      },
+      {
+        word:"make friends", pos:"verb phrase",
+        en:"to form new friendships with people",
+        ar:"يُكوّن صداقات — يبني علاقات صداقة جديدة مع أشخاص",
+        ex:"Children who enjoy sports tend to <b>make friends</b> more easily because of shared interests.",
+        exAr:"الأطفال الذين يستمتعون بالرياضة يميلون إلى تكوين الصداقات بسهولة أكبر بسبب الاهتمامات المشتركة."
+      },
+      {
+        word:"naturally", pos:"adverb",
+        en:"in a way that is normal, expected, or not forced; as might be expected",
+        ar:"بطبيعية / بشكل طبيعي — دون تصنّع أو إجبار",
+        ex:"She <b>naturally</b> greeted everyone with a warm smile, which made her very popular.",
+        exAr:"رحّبت بالجميع بطبيعية بابتسامة دافئة مما جعلها محبوبة جداً."
+      },
+      {
+        word:"say goodbye", pos:"verb phrase",
+        en:"to express farewell to someone when parting",
+        ar:"يودّع — يُعبّر عن الوداع عند الافتراق",
+        ex:"In many Arab cultures, it is considered rude to simply <b>say goodbye</b> and leave without a proper farewell.",
+        exAr:"في كثير من الثقافات العربية، يُعدّ من قلة الأدب أن تودّع الشخص وتغادر دون وداع لائق."
+      },
+      {
+        word:"take a seat", pos:"verb phrase",
+        en:"to sit down; an invitation or instruction to sit",
+        ar:"يأخذ مقعداً / يجلس — دعوة أو توجيه للجلوس",
+        ex:"The interviewer smiled warmly and said, 'Please <b>take a seat</b> and make yourself comfortable.'",
+        exAr:"ابتسم المحاور بدفء وقال: 'من فضلك اجلس واشعر بالراحة.'"
+      }
+    ],
+    mcqs:[
+      { q:"It took the students a while to ___ the meaning behind the teacher's metaphor.", opts:["say goodbye","catch on","take a seat"], ans:1 },
+      { q:"Her ___ was evident from the way she welcomed everyone with open arms.", opts:["greeting","friendliness","in the dark"], ans:1 },
+      { q:"A warm smile is a universal ___ that everyone understands.", opts:["greeting","friendship","take a seat"], ans:0 },
+      { q:"Building strong ___ requires time, honesty, and shared experiences.", opts:["friendships","greetings","friendliness"], ans:0 },
+      { q:"He was ___ about the surprise party his classmates had planned for him.", opts:["hard to say","in the dark","take a seat"], ans:1 },
+      { q:"It's ___ whether learning idioms or grammar is more important for fluency.", opts:["hard to say","catch on","naturally"], ans:0 },
+      { q:"She ___ the new students with a broad smile on their first day at school.", opts:["made friends","greeted","said goodbye"], ans:1 },
+      { q:"He tries to ___ wherever he travels because he enjoys meeting new people.", opts:["take a seat","make friends","say goodbye"], ans:1 },
+      { q:"___, she was the most popular student in the class because she was kind to everyone.", opts:["Naturally","Friendly","In the dark"], ans:0 },
+      { q:"After the long conference, it was time to ___ and head home.", opts:["take a seat","say goodbye","catch on"], ans:1 },
+      { q:"The teacher asked the late student to quickly ___ and join the lesson.", opts:["say goodbye","make friends","take a seat"], ans:2 },
+      { q:"He was always ___ and approachable, which made group work much easier.", opts:["friendly","naturally","in the dark"], ans:0 }
+    ]
+  },
+
+  // ── LESSON 2 ─────────────────────────────────
+  {
+    id:2, cls:'l2', theme:'l2-theme', color:'var(--l2)', hex:'#0a7a3e',
+    title:"Each to Their Own",
+    sub:"What do you do for fun? · Hobbies & Opinions",
+    words:[
+      {
+        word:"mind", pos:"verb",
+        en:"to feel bothered or upset about something; to object to something",
+        ar:"يمانع / يهتم — يشعر بالانزعاج من شيء ما أو يعترض عليه",
+        ex:"She doesn't <b>mind</b> listening to different opinions as long as the discussion stays respectful.",
+        exAr:"لا تمانع الاستماع إلى آراء مختلفة طالما بقي النقاش محترماً."
+      },
+      {
+        word:"crazy about it", pos:"idiom",
+        en:"very enthusiastic or passionate about something",
+        ar:"مجنون به / متحمس جداً له — شغوف بشيء ما بشكل كبير",
+        ex:"He is absolutely <b>crazy about</b> street photography and never goes anywhere without his camera.",
+        exAr:"إنه مجنون بالتصوير في الشوارع ولا يذهب إلى أي مكان بدون كاميرته."
+      },
+      {
+        word:"contemporary", pos:"adjective / noun",
+        en:"belonging to the present time; modern; a person living at the same time as another",
+        ar:"معاصر / حديث — ينتمي إلى الوقت الحاضر",
+        ex:"She prefers <b>contemporary</b> art because it reflects the struggles and beauty of modern life.",
+        exAr:"تُفضّل الفن المعاصر لأنه يعكس كفاحات وجماليات الحياة الحديثة."
+      },
+      {
+        word:"can't stand", pos:"idiom",
+        en:"to strongly dislike something or find it unbearable",
+        ar:"لا يطيق / لا يتحمل — يكره شيئاً بشدة ويجده لا يُحتمل",
+        ex:"He <b>can't stand</b> loud music at late hours because it makes it impossible for him to concentrate.",
+        exAr:"لا يطيق الموسيقى الصاخبة في ساعات متأخرة لأنها تجعل التركيز أمراً مستحيلاً."
+      },
+      {
+        word:"see eye to eye", pos:"idiom",
+        en:"to agree with someone; to share the same opinion or view",
+        ar:"يتفق مع شخص ما / يرى الأمور بنفس الطريقة",
+        ex:"The two friends rarely <b>see eye to eye</b> on politics, but they respect each other's views.",
+        exAr:"نادراً ما يتفق الصديقان على السياسة، لكنهما يحترمان وجهات نظر بعضهما."
+      },
+      {
+        word:"don't care for", pos:"idiom",
+        en:"to not like something; to have little interest in or dislike of something",
+        ar:"لا يُعجبه / ليس مهتماً به — لا يحب شيئاً أو ليس لديه اهتمام به",
+        ex:"She doesn't <b>care for</b> reality television because she finds it repetitive and unoriginal.",
+        exAr:"لا تُعجبها برامج الواقع لأنها تجدها مكررة وغير أصيلة."
+      },
+      {
+        word:"exhibit", pos:"noun / verb",
+        en:"a display of art or objects in a public space; to show or display publicly",
+        ar:"معرض / يعرض — عرض عام للفن أو للأشياء؛ يُظهر أو يعرض علناً",
+        ex:"The photography <b>exhibit</b> attracted thousands of visitors who were moved by the powerful images.",
+        exAr:"استقطب معرض التصوير آلاف الزوار الذين تأثروا بالصور القوية."
+      },
+      {
+        word:"trial", pos:"noun",
+        en:"a test or experiment to see if something works; a legal process in court",
+        ar:"تجربة / اختبار؛ محاكمة — عملية قانونية في المحكمة",
+        ex:"She signed up for a free <b>trial</b> of the art app to decide if it was worth paying for.",
+        exAr:"اشتركت في نسخة تجريبية مجانية من تطبيق الفن لتقرر ما إذا كان يستحق الدفع."
+      },
+      {
+        word:"series", pos:"noun",
+        en:"a number of things that come one after another in a sequence; a set of related television programmes",
+        ar:"سلسلة / مسلسل — عدد من الأشياء تأتي واحدة تلو الأخرى؛ مجموعة برامج تلفزيونية مترابطة",
+        ex:"The documentary <b>series</b> about wildlife received global praise for its stunning photography.",
+        exAr:"حظيت سلسلة الأفلام الوثائقية عن الحياة البرية بإشادة عالمية بسبب تصويرها المذهل."
+      },
+      {
+        word:"ethnic", pos:"adjective",
+        en:"relating to a group of people sharing a common cultural or national background",
+        ar:"عرقي / إثني — يتعلق بمجموعة من الناس تشترك في خلفية ثقافية أو قومية مشتركة",
+        ex:"The festival celebrated <b>ethnic</b> music from over twenty cultures, showcasing incredible global diversity.",
+        exAr:"احتفل المهرجان بالموسيقى الإثنية من أكثر من عشرين ثقافة مما أظهر تنوعاً عالمياً رائعاً."
+      }
+    ],
+    mcqs:[
+      { q:"She is absolutely ___ contemporary dance and never misses a performance.", opts:["crazy about","don't care for","trial"], ans:0 },
+      { q:"The gallery opened a new ___ showcasing paintings from local young artists.", opts:["series","trial","exhibit"], ans:2 },
+      { q:"They never ___ when it comes to choosing a hobby, but they respect each other.", opts:["catch on","see eye to eye","mind"], ans:1 },
+      { q:"He doesn't ___ classical music — he finds it too slow for his taste.", opts:["care for","exhibit","mind"], ans:0 },
+      { q:"She is passionate about ___ traditions and enjoys learning about different cultures.", opts:["contemporary","ethnic","trial"], ans:1 },
+      { q:"The streaming platform offered a 30-day ___ for new users to test the service.", opts:["series","trial","exhibit"], ans:1 },
+      { q:"The science fiction ___ became very popular because each episode ended on a cliffhanger.", opts:["trial","exhibit","series"], ans:2 },
+      { q:"Many young people prefer ___ music to classical because it feels more relevant to them.", opts:["ethnic","contemporary","trial"], ans:1 },
+      { q:"I ___ horror films — they give me nightmares and I avoid them completely.", opts:["don't care for","see eye to eye","can't stand"], ans:2 },
+      { q:"Do you ___ if we watch something different tonight? I've already seen this episode.", opts:["can't stand","mind","exhibit"], ans:1 },
+      { q:"He ___ people who talk loudly on the phone in public places.", opts:["sees eye to eye with","can't stand","minds"], ans:1 },
+      { q:"Would you ___ switching seats? I'd like to sit closer to the screen.", opts:["mind","can't stand","exhibit"], ans:0 }
+    ]
+  }
+];
+
+// ═══════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════
+let activeLessonId = 1;
+let activeWordIdx = null;
+let quizState = {};
+
+function getLesson(){ return lessons.find(l=>l.id===activeLessonId); }
+
+// ═══════════════════════════════════════════════
+// SPEECH
+// ═══════════════════════════════════════════════
+function speak(text){
+  if(!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang='en-US'; u.rate=0.85;
+  window.speechSynthesis.speak(u);
+}
+
+// ═══════════════════════════════════════════════
+// SOUND EFFECTS
+// ═══════════════════════════════════════════════
+function playCorrectSound(){
+  try {
+    const ctx = new (window.AudioContext||window.webkitAudioContext)();
+    const notes = [523.25, 659.25, 783.99, 1046.5];
+    notes.forEach((freq, i) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain); gain.connect(ctx.destination);
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, ctx.currentTime + i*0.12);
+      gain.gain.setValueAtTime(0, ctx.currentTime + i*0.12);
+      gain.gain.linearRampToValueAtTime(0.28, ctx.currentTime + i*0.12 + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + i*0.12 + 0.28);
+      osc.start(ctx.currentTime + i*0.12);
+      osc.stop(ctx.currentTime + i*0.12 + 0.28);
+    });
+  } catch(e){}
+}
+
+function playWrongSound(){
+  try {
+    const ctx = new (window.AudioContext||window.webkitAudioContext)();
+    [180, 150].forEach((freq, i) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain); gain.connect(ctx.destination);
+      osc.type = 'sawtooth';
+      osc.frequency.setValueAtTime(freq, ctx.currentTime + i*0.18);
+      gain.gain.setValueAtTime(0.3, ctx.currentTime + i*0.18);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + i*0.18 + 0.16);
+      osc.start(ctx.currentTime + i*0.18);
+      osc.stop(ctx.currentTime + i*0.18 + 0.16);
+    });
+  } catch(e){}
+}
+
+// ═══════════════════════════════════════════════
+// SCORE
+// ═══════════════════════════════════════════════
+function getScore(lid){
+  const q=quizState[lid]||{};
+  return {
+    correct:Object.values(q).filter(v=>v.correct).length,
+    answered:Object.values(q).length,
+    total:lessons.find(l=>l.id===lid).mcqs.length
+  };
+}
+
+function getTotalScore(){
+  let totalCorrect=0, totalAnswered=0, totalQs=0;
+  lessons.forEach(l=>{
+    const s=getScore(l.id);
+    totalCorrect+=s.correct;
+    totalAnswered+=s.answered;
+    totalQs+=s.total;
+  });
+  return { correct:totalCorrect, answered:totalAnswered, total:totalQs };
+}
+
+function getGradeMsg(pct){
+  if(pct===100) return '🌟 Perfect Score! Outstanding work!';
+  if(pct>=90)  return '🏆 Excellent! Almost flawless!';
+  if(pct>=75)  return '👏 Very Good! Keep it up!';
+  if(pct>=60)  return '👍 Good effort! Review missed words.';
+  if(pct>=50)  return '📚 Keep studying — you\'re getting there!';
+  return '💪 Keep practising — every attempt counts!';
+}
+
+// ═══════════════════════════════════════════════
+// RENDER NAV
+// ═══════════════════════════════════════════════
+function renderNav(){
+  document.getElementById('lessonNav').innerHTML = lessons.map(l=>`
+    <button class="lesson-btn ${l.cls} ${activeLessonId===l.id?'active':''}" onclick="selectLesson(${l.id})">
+      <div class="l-num"><span class="l-dot"></span>Lesson ${l.id}</div>
+      <div class="l-title">${l.title}</div>
+      <div class="l-sub">${l.sub}</div>
+    </button>
+  `).join('');
+}
+
+// ═══════════════════════════════════════════════
+// RENDER WORD CARD
+// ═══════════════════════════════════════════════
+function renderWordCard(){
+  if(activeWordIdx===null) return '';
+  const lesson=getLesson(), w=lesson.words[activeWordIdx];
+  return `
+    <div class="word-card">
+      <div class="wc-top">
+        <span class="wc-word">${w.word}</span>
+        <span class="wc-pos">${w.pos}</span>
+      </div>
+      <div class="wc-grid">
+        <div class="wc-box">
+          <div class="wc-label">English Meaning</div>
+          <div class="wc-meaning">${w.en}</div>
+        </div>
+        <div class="wc-box">
+          <div class="wc-label" style="text-align:right">المعنى بالعربية</div>
+          <div class="wc-arabic">${w.ar}</div>
+        </div>
+      </div>
+      <hr class="wc-divider">
+      <div class="wc-ex-label">Example Sentence</div>
+      <div class="wc-example">${w.ex}</div>
+      <div class="wc-ex-ar">${w.exAr}</div>
+      <button class="play-btn" onclick="speak('${w.word.replace(/'/g,"\\'").replace(/"/g,'&quot;')}')">🔊 Listen Again</button>
+    </div>
+  `;
+}
+
+// ═══════════════════════════════════════════════
+// RENDER MCQs
+// ═══════════════════════════════════════════════
+function renderMCQs(){
+  const lesson=getLesson();
+  const sc=getScore(lesson.id);
+  const stateQ=quizState[lesson.id]||{};
+  const mcqsHTML = lesson.mcqs.map((q,qi)=>{
+    const answered=stateQ[qi];
+    const opts=q.opts.map((o,oi)=>{
+      let cls='mcq-opt';
+      if(answered){
+        cls+=' answered';
+        if(oi===q.ans) cls+=' correct';
+        else if(oi===answered.chosen) cls+=' wrong';
+      }
+      return `<button class="${cls}" onclick="answerMCQ(${qi},${oi})">${o}</button>`;
+    }).join('');
+    const fb=answered
+      ?(answered.correct
+        ?`<div class="mcq-feedback ok">✅ Correct!</div>`
+        :`<div class="mcq-feedback no">❌ Correct answer: <strong>${q.opts[q.ans]}</strong></div>`)
+      :'';
+    return `
+      <div class="mcq-card">
+        <div class="mcq-q">${qi+1}. ${q.q.replace('___','<em>___</em>')}</div>
+        <div class="mcq-options">${opts}</div>${fb}
+      </div>`;
+  }).join('');
+
+  return `
+    <hr class="section-sep">
+    <div class="mcq-header">
+      <div class="mcq-title">✏️ Practice: Choose the best word.</div>
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+        <div class="score-box">Score: ${sc.correct} / ${sc.answered} answered</div>
+        <button class="reset-btn" onclick="resetQuiz(${lesson.id})">🔄 Reset</button>
+      </div>
+    </div>
+    ${mcqsHTML}`;
+}
+
+// ═══════════════════════════════════════════════
+// RENDER MAIN
+// ═══════════════════════════════════════════════
+function renderMain(){
+  const lesson=getLesson();
+  const chips=lesson.words.map((w,i)=>`
+    <button class="word-chip ${activeWordIdx===i?'active':''}" onclick="selectWord(${i})">
+      🔊 ${w.word}
+    </button>`).join('');
+
+  document.getElementById('mainContent').innerHTML=`
+    <div class="${lesson.theme}">
+      <p class="instruction">👆 Click a word to listen and learn its meaning.</p>
+      <div class="word-grid">${chips}</div>
+      ${renderWordCard()}
+      ${renderMCQs()}
+    </div>`;
+
+  renderTotalScore();
+}
+
+// ═══════════════════════════════════════════════
+// RENDER TOTAL SCORE PANEL
+// ═══════════════════════════════════════════════
+function renderTotalScore(){
+  const panel = document.getElementById('totalScorePanel');
+  const ts = getTotalScore();
+  const allDone = ts.answered === ts.total;
+  const pct = ts.total > 0 ? Math.round((ts.correct / ts.total) * 100) : 0;
+
+  // Per-lesson scores
+  const lessonRows = lessons.map(l=>{
+    const s = getScore(l.id);
+    return `
+      <div class="ts-box ${l.cls}-box">
+        <div class="ts-label">${l.title}</div>
+        <div class="ts-num">${s.correct}<span style="font-size:1rem;color:var(--muted)">/${s.total}</span></div>
+      </div>`;
+  }).join('');
+
+  if(!allDone){
+    // How many questions remain
+    const remaining = ts.total - ts.answered;
+    panel.innerHTML = `
+      <div class="total-score-card">
+        <h2>📊 Total Score</h2>
+        <div class="ts-sub">Complete all questions in both lessons to see your final score.</div>
+        <div class="ts-row">${lessonRows}
+          <div class="ts-box total-box">
+            <div class="ts-label">So Far</div>
+            <div class="ts-num">${ts.correct}<span style="font-size:1rem;color:var(--muted)">/${ts.answered}</span></div>
+          </div>
+        </div>
+        <div class="ts-incomplete">
+          <strong>${remaining}</strong> question${remaining!==1?'s':''} remaining. Answer all questions to unlock your final score!
+        </div>
+      </div>`;
+  } else {
+    const barWidth = pct;
+    panel.innerHTML = `
+      <div class="total-score-card">
+        <h2>🎯 Your Final Score</h2>
+        <div class="ts-sub">You have completed all ${ts.total} questions across both lessons!</div>
+        <div class="ts-row">${lessonRows}
+          <div class="ts-box total-box">
+            <div class="ts-label">Total Score</div>
+            <div class="ts-num">${ts.correct}<span style="font-size:1rem;color:var(--muted)">/${ts.total}</span></div>
+          </div>
+        </div>
+        <div class="ts-total-bar">
+          <div class="ts-total-bar-fill" id="scoreBar" style="width:0%"></div>
+        </div>
+        <div class="ts-grade">${getGradeMsg(pct)} &nbsp;|&nbsp; <strong>${pct}%</strong></div>
+        <div class="ts-actions">
+          <button class="ts-reset-btn" onclick="resetAll()">🔄 Reset All &amp; Try Again</button>
+        </div>
+      </div>`;
+    // Animate bar
+    setTimeout(()=>{
+      const bar = document.getElementById('scoreBar');
+      if(bar) bar.style.width = barWidth+'%';
+    }, 80);
+  }
+}
+
+// ═══════════════════════════════════════════════
+// ACTIONS
+// ═══════════════════════════════════════════════
+function selectLesson(id){ activeLessonId=id; activeWordIdx=null; renderNav(); renderMain(); }
+
+function selectWord(idx){
+  activeWordIdx=idx;
+  speak(getLesson().words[idx].word);
+  renderMain();
+  setTimeout(()=>{ const c=document.querySelector('.word-card'); if(c) c.scrollIntoView({behavior:'smooth',block:'nearest'}); },50);
+}
+
+function answerMCQ(qi,oi){
+  const lesson=getLesson();
+  if(!quizState[lesson.id]) quizState[lesson.id]={};
+  if(quizState[lesson.id][qi]) return;
+  const isCorrect = oi===lesson.mcqs[qi].ans;
+  quizState[lesson.id][qi]={chosen:oi,correct:isCorrect};
+  if(isCorrect) playCorrectSound();
+  else playWrongSound();
+  renderMain();
+  // Scroll to total score panel if all done
+  const ts = getTotalScore();
+  if(ts.answered === ts.total){
+    setTimeout(()=>{
+      const p=document.getElementById('totalScorePanel');
+      if(p) p.scrollIntoView({behavior:'smooth',block:'start'});
+    }, 400);
+  }
+}
+
+function resetQuiz(lid){ quizState[lid]={}; renderMain(); }
+
+function resetAll(){
+  quizState={};
+  renderNav();
+  renderMain();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ═══════════════════════════════════════════════
+// COPY PROTECTION
+// ═══════════════════════════════════════════════
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+document.addEventListener('dragstart', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('cut', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+  const k = e.key.toLowerCase();
+  const ctrl = e.ctrlKey || e.metaKey;
+  const blocked =
+    (ctrl && ['c','u','s','a','p','i'].includes(k)) ||
+    e.key === 'F12' ||
+    (ctrl && e.shiftKey && ['i','j','c','k'].includes(k));
+  if (blocked) { e.preventDefault(); e.stopPropagation(); return false; }
+});
+window.addEventListener('beforeprint', e => e.preventDefault());
+window.matchMedia('print').addListener(mq => { if(mq.matches) document.body.style.display='none'; else document.body.style.display=''; });
+(function(){
+  function check(){
+    const th=160;
+    const open = window.outerWidth-window.innerWidth>th || window.outerHeight-window.innerHeight>th;
+    document.getElementById('shield').style.display = open ? 'flex' : 'none';
+  }
+  window.addEventListener('resize', check);
+  setInterval(check, 1000);
+})();
+
+// ═══════════════════════════════════════════════
+// VISITOR COUNTER
+// ═══════════════════════════════════════════════
+(async function(){
+  const el = document.getElementById('visitorCount');
+  try {
+    const r = await fetch('https://api.counterapi.dev/v1/dina-rabie/g11-vocab-term3-2026/up');
+    const d = await r.json();
+    el.textContent = (d.count || d.value || '—').toLocaleString();
+  } catch {
+    try {
+      const r2 = await fetch('https://hits.sh/dina-rabie-g11-vocab-term3.json');
+      const d2 = await r2.json();
+      el.textContent = (d2.total || '—').toLocaleString();
+    } catch { el.textContent = '—'; }
+  }
+})();
+
+// ═══════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════
+renderNav();
+renderMain();
+</script>
+</body>
+</html>
